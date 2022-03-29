@@ -1,0 +1,5 @@
+package com.employee.operation.Services;
+
+public interface Service {
+
+}

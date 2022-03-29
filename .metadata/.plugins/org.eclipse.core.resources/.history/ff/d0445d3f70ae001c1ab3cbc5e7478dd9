@@ -1,0 +1,5 @@
+package com.LMS.operation.Entity;
+
+public class EmployeeEntity {
+
+}

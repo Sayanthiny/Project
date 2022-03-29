@@ -1,0 +1,11 @@
+package com.employee.operation.services;
+
+import com.employee.operation.dto.ViewLeaveDto;
+import com.employee.operation.entity.ViewLeave;
+
+
+public interface ViewLeaveService {
+//	public ViewLeave getLeaveDetails(int id);
+
+	public Iterable<ViewLeaveDto> getLeaveDetails();
+}

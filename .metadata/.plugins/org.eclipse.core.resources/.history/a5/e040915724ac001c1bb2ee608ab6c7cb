@@ -1,0 +1,33 @@
+package com.employee.operation.dto;
+
+public class ViewLeaveDto {
+	private int id;
+	private int employeeId;
+	private int leaveTypeId;
+	private int remainingLeaveCount;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+	public int getLeaveTypeId() {
+		return leaveTypeId;
+	}
+	public void setLeaveTypeId(int leaveTypeId) {
+		this.leaveTypeId = leaveTypeId;
+	}
+	public int getRemainingLeaveCount() {
+		return remainingLeaveCount;
+	}
+	public void setRemainingLeaveCount(int remainingLeaveCount) {
+		this.remainingLeaveCount = remainingLeaveCount;
+	}
+}

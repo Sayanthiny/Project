@@ -1,0 +1,9 @@
+package com.LMS.operation.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.LMS.operation.Entity.Employee;
+
+public interface EmployeeRepository extends JpaRepository<Employee, Integer>{
+
+}

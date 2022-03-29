@@ -1,0 +1,26 @@
+package com.employee.operation.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.employee.operation.entity.Employee;
+
+@Service
+public interface EmployeeService {
+
+	//get all employee
+	public List<Employee> getAllEmployee();
+	
+	//add employee
+	public void addEmployee();
+
+	void addEmployee(Employee employee);
+	
+//	//update employee
+//	public void addEmployee();
+//	//delete employee
+//	public void addEmployee();
+	
+	
+}

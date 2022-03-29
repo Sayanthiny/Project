@@ -1,0 +1,15 @@
+package com.employee.operation.services;
+
+import com.employee.operation.entity.ApplyLeave;
+import com.employee.operation.repository.ApplyLeaveRepository;
+
+public class ApplyLeaveServiceImplementation implements ApplyLeaveService {
+
+	ApplyLeaveRepository applyLeaveRepository;
+
+	@Override
+	public void applyForLeave(ApplyLeave applyLeave) {
+		applyLeaveRepository.save(applyLeave);
+		
+	}
+}

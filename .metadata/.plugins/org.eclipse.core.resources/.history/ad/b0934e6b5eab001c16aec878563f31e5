@@ -1,0 +1,32 @@
+package com.employee.operation.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.employee.operation.dto.ApplyLeaveDto;
+import com.employee.operation.entity.ApplyLeave;
+import com.employee.operation.entity.LeaveType;
+import com.employee.operation.repository.ApplyLeaveRepository;
+@Service
+public class ApplyLeaveServiceImplementation implements ApplyLeaveService {
+	@Autowired
+	ApplyLeaveRepository applyLeaveRepository;
+
+	@Override
+	public void applyForLeave(ApplyLeave applyLeave) {
+		applyLeaveRepository.save(applyLeave);
+		
+	}
+	
+	
+//	public List<ApplyLeave> viewDetails(int leaveCount,int leaveTypeId,int employeeId) {
+		
+//		int sum=+leaveCount;
+//		int leaves=getTotalLeaveCount;
+//		if(getTotalLeaveCount<=sum) {
+//			
+//		}
+//	}
+}

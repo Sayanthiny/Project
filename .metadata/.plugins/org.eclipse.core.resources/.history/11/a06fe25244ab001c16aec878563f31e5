@@ -1,0 +1,9 @@
+package com.employee.operation.services;
+
+import com.employee.operation.dto.ApplyLeaveDto;
+import com.employee.operation.entity.ApplyLeave;
+
+
+public interface ApplyLeaveService  {
+	public void applyForLeave(ApplyLeave applyLeave);
+}

@@ -1,0 +1,32 @@
+package com.employee.operation.entity;
+
+import javax.persistence.Id;
+
+public class LeaveType {
+	@Id
+	private int id;
+	private String name;
+	private int total_leave_count;
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getTotal_leave_count() {
+		return total_leave_count;
+	}
+	public void setTotal_leave_count(int total_leave_count) {
+		this.total_leave_count = total_leave_count;
+	}
+	
+	
+}

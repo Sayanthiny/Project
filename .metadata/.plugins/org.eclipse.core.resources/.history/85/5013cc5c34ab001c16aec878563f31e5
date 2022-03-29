@@ -1,0 +1,10 @@
+package com.employee.operation.services;
+
+import org.springframework.stereotype.Service;
+
+import com.employee.operation.entity.ViewLeave;
+
+@Service
+public interface ViewLeaveService {
+	public ViewLeave getLeaveDetails(int id);
+}

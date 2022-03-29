@@ -1,0 +1,11 @@
+package com.employee.operation.dto;
+
+public class ApplyLeaveDto {
+	
+	private int id;
+	private String reason;
+	private int leaveDaysCount;
+	private ViewLeaveDto viewLeave;
+	
+	
+}

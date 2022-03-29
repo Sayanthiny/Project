@@ -1,0 +1,10 @@
+package com.employee.operation.services;
+
+import org.springframework.stereotype.Service;
+
+import com.employee.operation.entity.ApplyLeave;
+
+
+public interface ApplyLeaveService  {
+	public void applyForLeave(ApplyLeave applyLeave);
+}

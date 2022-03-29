@@ -1,0 +1,36 @@
+package com.employee.operation.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
+public class ApplyLeave {
+
+	@Id
+	private int id;
+	private String reason;
+	private int leave_count;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getReason() {
+		return reason;
+	}
+	public void setReason(String reason) {
+		this.reason = reason;
+	}
+	public int getLeave_count() {
+		return leave_count;
+	}
+	public void setLeave_count(int leave_count) {
+		this.leave_count = leave_count;
+	}
+	
+	
+}

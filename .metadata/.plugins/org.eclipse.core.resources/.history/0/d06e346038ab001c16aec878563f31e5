@@ -1,0 +1,49 @@
+package com.employee.operation.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table
+public class ApplyLeave {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String reason;
+	private int leave_count;
+	
+	@ManyToOne
+	@JoinColumn(name = "employee_id")
+	private Employee employee;
+	
+	@ManyToOne
+	@JoinColumn(name = "leave_type")
+	private LeaveType leaveType;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getReason() {
+		return reason;
+	}
+	public void setReason(String reason) {
+		this.reason = reason;
+	}
+	public int getLeave_count() {
+		return leave_count;
+	}
+	public void setLeave_count(int leave_count) {
+		this.leave_count = leave_count;
+	}
+	
+	
+}

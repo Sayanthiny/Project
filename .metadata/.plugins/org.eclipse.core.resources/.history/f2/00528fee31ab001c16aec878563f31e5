@@ -1,0 +1,5 @@
+package com.employee.operation.entity;
+
+public class ViewLeave {
+
+}

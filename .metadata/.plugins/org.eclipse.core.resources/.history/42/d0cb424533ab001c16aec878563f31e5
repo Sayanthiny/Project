@@ -1,0 +1,18 @@
+package com.employee.operation.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.employee.operation.entity.ApplyLeave;
+import com.employee.operation.services.ApplyLeaveService;
+
+
+@RestController
+public class ApplyLeaveController {
+	ApplyLeaveService applyLeaveService;
+	
+	@PostMapping("/applyLeave")
+	public void applyLeave(ApplyLeave applyLeave) {
+		applyLeaveService.applyForLeave(applyLeave);
+	}
+}

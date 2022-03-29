@@ -1,0 +1,12 @@
+package com.employee.operation.dto;
+
+public class ApplyLeaveDto {
+	
+	private int id;
+	private String reason;
+	private int leave_count;
+	private int leave_type_id;
+	private int employee_id;
+	
+
+}

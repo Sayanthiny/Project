@@ -1,0 +1,17 @@
+package com.employee.operation.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.employee.operation.entity.ApplyLeave;
+import com.employee.operation.repository.ApplyLeaveRepository;
+
+public class ApplyLeaveServiceImplementation implements ApplyLeaveService {
+	@Autowired
+	ApplyLeaveRepository applyLeaveRepository;
+
+	@Override
+	public void applyForLeave(ApplyLeave applyLeave) {
+		applyLeaveRepository.save(applyLeave);
+		
+	}
+}

@@ -1,0 +1,55 @@
+package com.employee.operation.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.employee.operation.dto.ViewLeaveDto;
+import com.employee.operation.entity.ViewLeave;
+import com.employee.operation.services.ViewLeaveService;
+
+@RestController
+public class ViewLeaveController {
+	@Autowired
+	ViewLeaveService viewLeaveService;
+	
+//	@GetMapping("/getDetails")
+//	public ViewLeave getLeaveDetails(int id) {
+//		return viewLeaveService.getLeaveDetails(id);
+//		
+//	}
+	
+	@GetMapping("/getDetails")
+	
+	public ResponseEntity<List<ViewLeaveDto>> emp(){
+		List<ViewLeaveDto> dtos=new ArrayList<>();
+		viewLeaveService.getLeaveDetails().forEach(viewLeave->{
+			ViewLeaveDto viewleavedto=new ViewLeaveDto();
+			viewleavedto.setEmployeeId(viewLeave.getId()); //employee_id
+			viewleavedto.setRemainingLeaveCount(viewLeave.getRemainingLeaveCount()); // remaining leave
+			viewleavedto.setLeaveTypeId(viewLeave.getLeaveTypeId());// leave_type from leave type table
+			viewleavedto.setId(viewLeave.getId()); //id
+		});
+		return new ResponseEntity<List<ViewLeaveDto>>(HttpStatus.OK);
+		
+	}
+	
+	
+//	  public ResponseEntity<List<EmployeeLeaveTypeResDto>> emp() {
+//	    List<EmployeeLeaveTypeResDto> dtos =new ArrayList<>();
+//	    employeeleavetypeService.getAllEmployeeLeaveType().forEach(leyveType->{
+//	      EmployeeLeaveTypeResDto employeeleavetypeResDto=new EmployeeLeaveTypeResDto();
+//	      employeeleavetypeResDto.setId(leyveType.getId());
+//	      EmployeeDto employeeDto=new EmployeeDto();
+//	      employeeDto.setEmpName(leyveType.getEmployee().getEmpName());
+//	      employeeleavetypeResDto.setEmployee(employeeDto);
+//	      dtos.add(employeeleavetypeResDto);
+//	    });
+//	    return new ResponseEntity<List<EmployeeLeaveTypeResDto>>(dtos, HttpStatus.OK);  
+//	  }
+}

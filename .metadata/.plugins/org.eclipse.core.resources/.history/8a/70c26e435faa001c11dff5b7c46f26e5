@@ -1,0 +1,24 @@
+package com.example.operation.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.operation.Entity.Product;
+import com.example.operation.Repository.ProductRepository;
+
+
+public class ProductServiceImplementation {
+	@Autowired
+	private ProductRepository productRepository;
+	
+	
+	public List<Product>getAllProducts(){
+		List<Product> products=productRepository.findAll();
+		return products;
+	}
+	
+	
+	
+	
+}

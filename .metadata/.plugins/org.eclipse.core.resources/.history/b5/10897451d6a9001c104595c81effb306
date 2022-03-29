@@ -1,0 +1,6 @@
+package com.CRUD.operation.Services;
+
+public interface EmployeeService {
+
+	public List<> getAllEmployee();
+}

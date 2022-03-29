@@ -1,0 +1,8 @@
+package com.example.operation.util;
+
+public class endPointURL {
+	public static final String product="getPro";
+	public static final String slash="/";
+	public static final String code="{code}";
+
+}

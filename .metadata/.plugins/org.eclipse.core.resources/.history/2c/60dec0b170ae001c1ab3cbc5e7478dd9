@@ -1,0 +1,5 @@
+package com.LMS.operation.Services;
+
+public interface EmployeeService {
+
+}

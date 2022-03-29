@@ -1,0 +1,5 @@
+package com.CRUD.Services;
+
+public interface EmployeeService {
+
+}

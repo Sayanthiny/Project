@@ -1,0 +1,39 @@
+package com.employee.operation.dto;
+
+public class ApplyLeaveDto {
+	
+	private String reason;
+	private int leaveCount;
+	private int leaveTypeId;
+	private int employeeId;
+	public String getReason() {
+		return reason;
+	}
+	public void setReason(String reason) {
+		this.reason = reason;
+	}
+
+	public int getLeave_count() {
+		return leave_count;
+	}
+	public void setLeave_count(int leave_count) {
+		this.leave_count = leave_count;
+	}
+	public int getLeaveTypeId() {
+		return leaveTypeId;
+	}
+	public void setLeaveTypeId(int leaveTypeId) {
+		this.leaveTypeId = leaveTypeId;
+	}
+	public int getEmployeeId() {
+		return employeeId;
+	}
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+	
+	
+	
+	
+
+}

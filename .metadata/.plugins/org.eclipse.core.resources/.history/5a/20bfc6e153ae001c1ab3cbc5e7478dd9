@@ -1,0 +1,24 @@
+package com.employee.operation.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.employee.operation.entity.Employee;
+import com.employee.operation.entity.ViewLeave;
+import com.employee.operation.repository.ViewLeaveRepository;
+
+@Service
+public class ViewLeaveServiceImplementation implements ViewLeaveService{
+	@Autowired
+	ViewLeaveRepository viewLeaveRepository;
+
+	@Override
+	public List<ViewLeave> getLeaveDetails() {
+		// TODO Auto-generated method stub
+		return viewLeaveRepository.findAll();
+	}
+
+	
+}
