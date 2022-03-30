@@ -1,0 +1,9 @@
+package com.LMS.operation.util;
+
+public class endPointURL {
+	public final String SLASH="/";
+	public final String EMPLOYEE=SLASH+"employee";
+	public final String ID= "{id}";
+	public final String DELETE_EMPLOYEE=EMPLOYEE+SLASH+ID;
+	
+}

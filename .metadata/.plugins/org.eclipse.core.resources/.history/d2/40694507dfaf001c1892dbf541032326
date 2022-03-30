@@ -1,0 +1,23 @@
+package com.LMS.operation.Controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.LMS.operation.Entity.Employee;
+import com.LMS.operation.Services.EmployeeService;
+
+
+@RestController
+public class EmployeeController {
+	@Autowired
+	EmployeeService employeeService;
+	
+	@GetMapping("/getAllEmployee")
+	public List<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return employeeService.getAllEmployee();
+	}
+}

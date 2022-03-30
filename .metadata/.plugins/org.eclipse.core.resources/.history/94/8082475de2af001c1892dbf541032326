@@ -1,0 +1,12 @@
+package com.LMS.operation.Services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.LMS.operation.Entity.Employee;
+
+@Service
+public interface EmployeeService {
+	public List <Employee> getAllEmployee();
+}

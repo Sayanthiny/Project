@@ -1,0 +1,30 @@
+package com.LMS.operation.Services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.LMS.operation.Entity.Employee;
+import com.LMS.operation.Repository.EmployeeRepository;
+
+@Service
+public class EmployeeServiceImplementation implements EmployeeService{
+	@Autowired
+	EmployeeRepository employeeRepository;
+
+	@Override
+	public List<Employee> getAllEmployee() {
+		// TODO Auto-generated method stub
+		return employeeRepository.findAll();
+	}
+
+	@Override
+	public Employee getOneEmployee(int id) {
+		return employeeRepository.findById(id).get();
+	}
+
+	
+	
+
+}

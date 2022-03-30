@@ -1,0 +1,15 @@
+package com.LMS.operation.Services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.LMS.operation.Entity.Employee;
+
+@Service
+public interface EmployeeService {
+	public List <Employee> getAllEmployee();
+	
+	public Employee getOneEmployee(@PathVariable int id);
+}

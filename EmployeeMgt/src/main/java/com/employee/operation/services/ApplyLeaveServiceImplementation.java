@@ -1,8 +1,6 @@
 package com.employee.operation.services;
 
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +16,7 @@ public class ApplyLeaveServiceImplementation implements ApplyLeaveService {
 	@Override
 	public void applyForLeave(ApplyLeave applyLeave) {
 		applyLeaveRepository.save(applyLeave);
-		
-	}
+		}
 
 
 	@Override
